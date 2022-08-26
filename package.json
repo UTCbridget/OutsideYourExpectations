@@ -1,0 +1,50 @@
+{
+    "name": "yatas",
+    "version": "1.0.0",
+    "description": "Yet Another Tailwind Apline Starter",
+    "scripts": {
+        "clean": "del _site",
+        "build": "NODE_ENV=production concurrently \"npm:build-*\" && node hash && ELEVENTY_ENV=production eleventy",
+        "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+        "watch": "npx @11ty/eleventy --watch",
+        "serve": "npx @11ty/eleventy --serve",
+        "start": "npx @11ty/eleventy --serve",
+        "watch-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css -w",
+        "watch-js": "npx esbuild ./assets/js/* --outdir=./_site/js/ --bundle --target=es2018 --watch",
+        "build-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css --minify",
+        "build-js": "npx esbuild ./assets/js/* --outdir=./_site/js/  --bundle --target=es2018 --minify",
+        "debug": "DEBUG=* npx @11ty/eleventy"
+    },
+    "keywords": [
+        "eleventy",
+        "starter",
+        "TailwindCSS",
+        "Alpine.js"
+    ],
+    "author": "Yann Haefliger<hello@needbrainz.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.0",
+        "@11ty/eleventy-navigation": "^0.3.2",
+        "@11ty/eleventy-plugin-rss": "^1.1.2",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+        "@11ty/eleventy-upgrade-help": "^1.0.1",
+        "alpinejs": "^3.0.6",
+        "autoprefixer": "^10.4.0",
+        "concurrently": "^7.0.0",
+        "del-cli": "^4.0.0",
+        "esbuild": "^0.14.0",
+        "html-minifier": "^4.0.0",
+        "luxon": "^2.3.1",
+        "markdown-it": "^12.3.2",
+        "markdown-it-anchor": "^8.4.1",
+        "md5": "^2.3.0",
+        "postcss": "^8.4.5",
+        "tailwindcss": "^3.0.7"
+    },
+    "dependencies": {
+        "aos": "^2.3.4",
+        "blazy": "^1.8.2",
+        "confetti-js": "^0.0.18"
+    }
+}

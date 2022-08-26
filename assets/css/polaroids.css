@@ -1,0 +1,208 @@
+#polaroids {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 20px;
+    height: fit-content;
+    background: url(assets/images/chattanooga/chattanooga-road-map.webp) no-repeat;
+    background-size: cover;
+    border-top: 1px solid #ccc;
+    margin-top: 36px;
+    padding-top: 24px;
+    width: 100%
+}
+
+#polaroids ul {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    right: 0
+}
+
+#polaroids ul.row-2 {
+    top: 45%
+}
+
+#polaroids li {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    border: solid 12px #fff;
+    background: #fff;
+    box-shadow: 0 0 15px 0 #555;
+    transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    top: 50px
+}
+
+#polaroids li:hover {
+    top: 0;
+    opacity: .5;
+    text-align: center
+}
+
+#polaroids .tilt-left {
+    transform: rotate(10deg)
+}
+
+#polaroids .tilt-none {
+    transform: rotate(-5deg)
+}
+
+#polaroids .tilt-right {
+    transform: rotate(-10deg)
+}
+
+#polaroids .tilt-way-left {
+    transform: rotate(20deg)
+}
+
+#polaroids .tilt-way-right {
+    transform: rotate(-20deg)
+}
+
+#polaroids p {
+    text-align: center;
+    margin-bottom: 18px
+}
+
+#polaroids .light {
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background: #fff;
+    filter: blur(100px);
+    opacity: .3;
+    pointer-events: none;
+    margin-top: 200px;
+    z-index: 0
+}
+
+#polaroids h3 {
+    color: #fdb736;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px
+}
+
+.polaroid-flex {
+    display: flex;
+    justify-content: center;
+    padding: 36px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.polaroid-row-1 {
+    margin-top: -60px
+}
+
+.polaroid-image {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    margin-bottom: 25px;
+    padding: 12px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column
+}
+
+.polaroid-image .container {
+    text-align: center;
+    padding: 10px 20px
+}
+
+.polaroid-image.five {
+    margin-left: -24px
+}
+
+@media (max-width:1024px) {
+    #polaroids p {
+        font-size: 1rem
+    }
+}
+
+@media (max-width:991px) {
+    #polaroids {
+        margin: 0 auto;
+        background: url(assets/images/chattanooga/chattanooga-road-map-mobile.webp) no-repeat;
+        background-size: cover
+    }
+    #polaroids h3 {
+        width: 80%;
+        margin: 0 auto 24px
+    }
+    .polaroid-flex {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0 auto!important;
+        padding: 0;
+        display: inline-block;
+        overflow: hidden;
+        padding-bottom: 60px
+    }
+    .polaroid-flex>div {
+        margin-top: 0!important
+    }
+    .polaroid-image {
+        width: 60%;
+        margin: 24px auto;
+        margin-top: -48px!important
+    }
+    .polaroid-image.one {
+        margin-top: 36px!important
+    }
+    .polaroid-image.two {
+        margin-left: 72px!important
+    }
+    .polaroid-image.four {
+        margin-left: 60px!important
+    }
+    .polaroid-image.five {
+        margin-left: 130px
+    }
+    .polaroid-row-2 {
+        margin-top: 0!important;
+        height: 0;
+        overflow: 0
+    }
+    .polaroid-image.six.tilt-way-right {
+        margin-left: 100px!important;
+        transform: rotate(10deg)!important;
+        margin-top: 48px!important
+    }
+    .polaroid-image.nine {
+        margin-top: 24px!important;
+        margin-left: 150px
+    }
+    img.power-c-pen {
+        transform: rotate(-45deg);
+        bottom: -130px;
+        left: 120px
+    }
+    .polaroid-flex {
+        padding-bottom: 24px
+    }
+    .polaroid-row-2 {
+        margin-top: -100px!important
+    }
+    .polaroid-image.six.tilt-way-right {
+        margin-top: 30px!important
+    }
+}
+
+@media (max-width:420px) {
+    .polaroid-image.five {
+        margin-left: 80px
+    }
+}

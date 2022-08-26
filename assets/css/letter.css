@@ -1,0 +1,284 @@
+.section-letter {
+    margin-bottom: 0;
+    overflow: hidden
+}
+
+.letter-effect {
+    height: 800px;
+    width: 100%;
+    min-width: 1170px
+}
+
+.letter-image {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    cursor: none
+}
+
+.animated-mail {
+    position: absolute;
+    height: 400px;
+    width: 600px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s
+}
+
+.animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 400px 600px;
+    border-color: transparent transparent #edbd63 transparent;
+    z-index: 2
+}
+
+.animated-mail .top-fold {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 200px 300px 0 300px;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    -moz-transform-origin: 50% 0%;
+    -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    border-color: #d19c39 transparent transparent transparent;
+    z-index: 2
+}
+
+.animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 600px;
+    height: 400px;
+    background: #ecb653;
+    z-index: 0
+}
+
+.animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 200px 0 200px 300px;
+    border-color: transparent transparent transparent #e3ac46;
+    z-index: 2
+}
+
+.animated-mail .right-fold {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 200px solid transparent;
+    border-right: 300px solid #e3ac46;
+    border-bottom: 200px solid transparent;
+    z-index: 3
+}
+
+.animated-mail .letter {
+    left: 15px;
+    bottom: 0;
+    position: absolute;
+    width: 570px;
+    height: 120px;
+    background: #fff;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s
+}
+
+.animated-mail .letter .letter-border {
+    height: 20px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #fdb736, #fdb736 8px, transparent 8px, transparent 18px)
+}
+
+.animated-mail .letter .letter-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 20px;
+    width: 40%;
+    background: #fdb736
+}
+
+.animated-mail .letter .letter-context {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 20px;
+    width: 20%;
+    background: #fdb736
+}
+
+.accepted-text {
+    color: #112e51;
+    text-align: center;
+    margin-bottom: -48px;
+    margin-top: 80px;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Special Elite', cursive
+}
+
+.letter-power-c {
+    width: 20%;
+    margin: -24px auto -32px;
+    display: none
+}
+
+.letter-body {
+    margin-top: 100px
+}
+
+.letter-body hr {
+    width: 100%;
+    margin: 24px auto 0
+}
+
+.animated-mail .letter .letter-stamp {
+    margin-top: 60px;
+    margin-left: 240px;
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    background: #ffe7bc;
+    position: absolute;
+    top: -24px;
+    right: 24px;
+    text-align: center
+}
+
+.animated-mail .letter .letter-stamp img {
+    width: 75px
+}
+
+.letter-image.click .animated-mail {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px)
+}
+
+.letter-image.click .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    -webkit-transition: transform 0.4s, z-index 0.2s;
+    -webkit-transform: rotateX(180deg);
+    -moz-transition: transform 0.4s, z-index 0.2s;
+    -moz-transform: rotateX(180deg);
+    z-index: 0
+}
+
+.letter-image.click .animated-mail .letter {
+    height: 570px
+}
+
+.letter-image.click .shadow {
+    width: 1000px
+}
+
+@media (max-width:1170px) {
+    .letter-effect {
+        max-width: 90%;
+        min-width: unset
+    }
+}
+
+@media (max-width:1024px) {
+    .letter-effect {
+        height: 900px
+    }
+}
+
+@media (max-width:600px) {
+    .section-letter h3 {
+        font-size: 2rem
+    }
+    a.apply-today {
+        text-decoration: underline
+    }
+    a.apply-today:hover {
+        color: #fff;
+        text-decoration: none
+    }
+    a.apply-today::before {
+        display: none
+    }
+    .letter-effect {
+        overflow-y: hidden;
+        margin-top: 100px!important
+    }
+    .animated-mail .letter {
+        height: 120px;
+        width: 380px
+    }
+    .letter-image {
+        top: 80%;
+        width: 400px
+    }
+    .animated-mail,
+    .animated-mail .back-fold {
+        height: 200px;
+        width: 400px
+    }
+    .animated-mail .top-fold {
+        border-width: 100px 200px 0 200px
+    }
+    .animated-mail .body {
+        border-width: 0 0 200px 400px
+    }
+    .animated-mail .left-fold {
+        border-width: 100px 0 100px 200px
+    }
+    .animated-mail .right-fold {
+        border-top: 100px solid transparent;
+        border-right: 200px solid #e3ac46;
+        border-bottom: 100px solid transparent
+    }
+    .letter-image.click .animated-mail .letter {
+        height: 370px;
+        left: 9px
+    }
+    .animated-mail .letter .letter-stamp {
+        height: 75px;
+        width: 75px
+    }
+    .letter-stampner {
+        margin-top: -30px
+    }
+    .animated-mail .letter .letter-stamp img {
+        width: 50px
+    }
+    .accepted-text {
+        margin-bottom: -72px;
+        margin-top: 40px;
+        font-size: 2rem
+    }
+}
+
+@media (max-width:420px) {
+    .letter-effect {
+        height: 650px
+    }
+    .letter-image.click .animated-mail .letter {
+        left: 42px
+    }
+    .animated-mail .letter {
+        width: 315px
+    }
+}

@@ -1,0 +1,140 @@
+.section-masonry {
+    margin-top: unset;
+    margin-bottom: unset;
+    background: #fff;
+    padding: 36px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px
+}
+
+.section-masonry h3 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    margin-top: 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    color: #fdb736;
+    padding-bottom: 1rem
+}
+
+.section-masonry .grid {
+    column-count: 4;
+    column-gap: .25em;
+    row-gap: 0;
+    margin: auto;
+    width: 100%
+}
+
+.section-masonry .grid__item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem
+}
+
+.section-masonry img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    overflow-y: hidden;
+    display: block;
+    transition: transform .4s ease-in-out
+}
+
+.section-masonry .college-wrapper:hover .mason-img img {
+    transform: scale(1.25) translateZ(0)!important
+}
+
+.section-masonry a.btn {
+    background-color: #fff;
+    margin: 24px auto 0
+}
+
+.section-masonry h3 span {
+    vertical-align: middle
+}
+
+.caption {
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #112e51;
+    padding: 6px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(257deg, #fdb736 50%, transparent 50%);
+    background-image: linear-gradient(-257deg, #fdb736 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 750ms ease-in-out;
+    transition: background 750ms ease-in-out
+}
+
+.college-wrapper:hover .caption {
+    background-position: 0
+}
+
+.caption,
+.caption a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    line-height: 1.3rem;
+    text-align: center;
+    display: inline-block;
+    overflow: auto;
+    margin-top: 0
+}
+
+.caption svg {
+    color: var(--gold);
+    transition: all 1s ease-in-out
+}
+
+.college-wrapper:hover svg {
+    color: var(--blue)
+}
+
+.caption a {
+    margin-top: -2px
+}
+
+@media (max-width:1024px) {
+    .caption {
+        background: rgba(17, 46, 81, .5)
+    }
+    .college-wrapper:hover .caption {
+        background: rgba(253, 183, 54, .8)
+    }
+}
+
+@media(max-width:768px) {
+    .section-masonry h4.blue-head {
+        margin-bottom: 36px
+    }
+    .section-masonry .grid {
+        column-count: 3
+    }
+    .caption {
+        background: rgba(17, 46, 81, .85);
+    }
+}
+
+@media(max-width:600px) {
+    .section-masonry {
+        padding-top: 36px
+    }
+    .section-masonry .grid {
+        column-count: 2
+    }
+}
+
+@media(max-width:420px) {
+    .section-masonry .grid {
+        column-count: 1
+    }
+}
