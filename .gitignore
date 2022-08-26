@@ -47,3 +47,5 @@
 /robots.txt
 /update.php
 /web.config
+node_modules
+.DS_Store
