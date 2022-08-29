@@ -27,7 +27,13 @@
       <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
         <div class="main-content inner">
           <div class="utc-rave-alert"></div>
-          {% include 'layouts/tophero.njk' %}
+          <section class="section-card boxed love-utc">
+            <div class="card">
+              {% include 'layouts/tophero.njk' %}
+              {% include 'layouts/quickfacts.njk' %}
+            </div>
+            {% include 'layouts/homeboundcopy.njk' %}
+          </section>
           {% block content %}
             {{ content | safe }}
           {% endblock %}
@@ -38,12 +44,23 @@
       </footer>
     </div>
     {% set js %}
-        {% include "../../../node_modules/blazy/blazy.js" %}
-        {% include "../../../node_modules/aos/dist/aos.js" %}
+    {% include "../../../node_modules/blazy/blazy.js" %}
+    {% include "../../../node_modules/aos/dist/aos.js" %}
     {% endset %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" ></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" integrity="sha512-Yrd3VqXNBUzyCQWVBlL65mTdE1snypc9E3XnGJba0zJmxweyJAqDNp6XSARxxAO6hWdwMpKQOIGE5uvGdG0+Yw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"
+      integrity="sha512-Yrd3VqXNBUzyCQWVBlL65mTdE1snypc9E3XnGJba0zJmxweyJAqDNp6XSARxxAO6hWdwMpKQOIGE5uvGdG0+Yw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <script>
       (function () { // Initialize
         var bLazy = new Blazy();
