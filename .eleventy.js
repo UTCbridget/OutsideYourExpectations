@@ -2,8 +2,6 @@ const htmlmin = require('html-minifier')
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const { DateTime } = require("luxon");
 const fs = require("fs");
-require("aos");
-require("blazy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -115,7 +113,7 @@ module.exports = function(eleventyConfig) {
     return {
         dir: {
             input: "src",
-            data: "../_data"
+            data: "_test",
         }
     };
 };

@@ -10,9 +10,9 @@
         "serve": "npx @11ty/eleventy --serve",
         "start": "npx @11ty/eleventy --serve",
         "watch-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css -w",
-        "watch-js": "npx esbuild ./assets/js/* --outdir=./_site/js/ --bundle --target=es2018 --watch",
+        "watch-js": "npx esbuild ./assets/js/scripts.js --outfile=./_site/js/scripts.js --bundle --target=es2018 --watch",
         "build-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css --minify",
-        "build-js": "npx esbuild ./assets/js/* --outdir=./_site/js/  --bundle --target=es2018 --minify",
+        "build-js": "npx esbuild ./assets/js/scripts.js --outfile=./_site/js/scripts.js  --bundle --target=es2018 --minify",
         "debug": "DEBUG=* npx @11ty/eleventy"
     },
     "keywords": [
