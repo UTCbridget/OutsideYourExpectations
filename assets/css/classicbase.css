@@ -726,7 +726,10 @@ img.power-c-pen {
         justify-content: flex-start
     }
     .card h2 {
-        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
         width: 80%
     }
     .card p {
