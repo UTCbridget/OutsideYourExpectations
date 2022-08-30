@@ -8,6 +8,7 @@
     {% if description %}
       <meta name="description" content="{{ description or metadata.description }}"/>
     {% endif %}
+    <meta name="generator" content="{{ eleventy.generator }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="generator" content="Eleventy"/>
     <link rel="stylesheet" href="/{{ hash['css/styles.css'] }}"/>
@@ -30,10 +31,10 @@
           <div class="utc-rave-alert"></div>
           <section class="section-card boxed love-utc">
             <div class="card">
-              {% include 'layouts/outside/topherooutside.njk' %}
+              {% include 'layouts/tophero.njk' %}
               {% include 'layouts/quickfacts.njk' %}
             </div>
-            {% include 'layouts/outside/homeboundcopyoutside.njk' %}
+            {% include 'layouts/homeboundcopy.njk' %}
           </section>
           {% block content %}
             {{ content | safe }}

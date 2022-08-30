@@ -3,36 +3,70 @@ title: Outside Your Expectations
 description: The University of Tennessee at Chattanooga is not your average university.
 permalink: "outside/"
 data: metadata
-layout: layouts/base.njk
 
 ---
 
-{# <h1>{{tito.title}}</h1> #}
+<!DOCTYPE html>
+<html lang="en">
+  {# <title>{{ tito.title }}</title> #}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta charset="UTF-8"/>
+    {% if description %}
+      <meta name="description" content="{{ description or metadata.description }}"/>
+    {% endif %}
+        {# - Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="generator" content="Eleventy"/>
+    <link rel="stylesheet" href="/{{ hash['css/styles.css'] }}"/>
+    <script defer src="/{{ hash['js/scripts.js'] }}"></script>
+    {# <script defer src="/{{ hash['js/raverss.js'] }}"></script> #}
+    {% block head %}{% endblock %}
+  </head>
+  <body
+    class="antialiased">
+    {# <div class="container" id="container"> #}
+    <div>
+      <header
+        class="header" itemscope="" itemtype="https://schema.org/WPHeader">
+        {# <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
+        {% include 'layouts/header.njk' %}
+      </header>
+      {# inner #}
+      <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+        <div class="main-content inner">
+          <div class="utc-rave-alert"></div>
+          <section class="section-card boxed love-utc">
+            <div class="card">
+              {% include 'layouts/outside/topherooutside.njk' %}
+              {% include 'layouts/quickfacts.njk' %}
+            </div>
+            {% include 'layouts/outside/homeboundcopyoutside.njk' %}
+          </section>
+          {% block content %}
+            {{ content | safe }}
+          {% endblock %}
+        </div>
+      </main>
+      <footer>
+        {% include 'layouts/footer.njk' %}
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"
+      integrity="sha512-Yrd3VqXNBUzyCQWVBlL65mTdE1snypc9E3XnGJba0zJmxweyJAqDNp6XSARxxAO6hWdwMpKQOIGE5uvGdG0+Yw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
 
- {# <div class="wrap">
-    <h1 itemprop="headline">The UTC website is currently unavailable.</h1>
-    <div class="content-sidebar-wrap">
-      <div class="content" >
-      <article aria-label="The UTC Website is Unavailable" itemscope="" itemtype="https://schema.org/CreativeWork">
-      <div class="entry-content" itemprop="text">
-        <h2>From the Communications and Marketing Department</br>
-          at the University of Tennessee at Chattanooga</h2>
-        <p class="network-notification">The UTC website is currently unavailable, but other network connections are operational.</br/>Please <a href="https://blog.utc.edu/itstatus/" title="IT Status page">go to the IT Status page</a> for the latest updates.</p>
-        <p style="margin-bottom:12px;text-align: center">Use these logins to access your online UTC accounts:</p>
-        <div class="button-wrapper">
-          <div><a class="btn btn-primary logins" href="https://portal.microsoftonline.com/" title="O365 login">O365</a></div>
-          <div><a class="btn btn-primary logins" href="https://webauth.utc.edu/cas/login?service=https%3A%2F%2Futchattanooga.instructure.com%2Flogin%2Fcas" title="Canvas login">Canvas</a></div>
-          <div><a class="btn btn-primary logins" href="https://mymocs.utc.edu/" title="MyMocsNet login">MyMocsNet</a></div>
-          <div><a class="btn btn-primary logins" href="https://irisweb.tennessee.edu/irj/portal" title="Iris">IRIS</a></div>
-			<div><a class="btn btn-primary logins" href="https://blog.utc.edu/itstatus/" title="Iris">IT Status</a></div>
-        </div>
-        <hr />
-        <h2>Additional UTC Contacts:</h2>
-        <p>For application, registration, financial aid and general inquires, please call &nbsp;<i class="fas fa-phone"></i>&nbsp;&nbsp;<a href="tel:423-425-4662">423-425-4662</a>.</p>
-        <p>For Help Desk assistance, please call &nbsp;<i class="fas fa-phone"></i>&nbsp;&nbsp;<a href="tel:423-425-4662">423-425-4000</a>, email us  at &nbsp;<i class="fas fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:ithelp@utc.edu">ithelp@utc.edu</a> or open a ticket (if available) &nbsp;<i class="fas fa-hands-helping"></i>&nbsp;&nbsp;<a href="https://ithelp.utc.edu/">IT Help Desk Ticket</a>.</p>
-        <p><em>NOTE: 
-          Please be patient as we are experiencing a large number of calls at this time. We will do our best to answer your calls as quickly as possible, but if you are unable to reach someone, please keep trying.</em></p>
-        </article>
-        </div>
-      </div> #}
-    {# </div> #}
+          <!--Initialize Blazy-->
+    <script>
+        ;
+        (function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+    </script>
+  </body>
+</html>
