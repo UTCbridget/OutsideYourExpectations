@@ -6,7 +6,7 @@ const assets = [
     'js/scripts.js'
 ];
 
-const dataFile = 'src/_test/hash.json';
+const dataFile = 'src/_data/hash.json';
 
 const production = process.env.NODE_ENV === 'development' ? false : true;
 

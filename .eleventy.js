@@ -113,7 +113,7 @@ module.exports = function(eleventyConfig) {
     return {
         dir: {
             input: "src",
-            data: "_test",
+            data: "_data",
         }
     };
 };

@@ -20,8 +20,7 @@
     class="antialiased">
     {# <div class="container" id="container"> #}
     <div>
-      <header
-        class="header" itemscope="" itemtype="https://schema.org/WPHeader">
+      <header class="header">
         {# <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
         {% include 'layouts/header.njk' %}
       </header>
@@ -41,7 +40,7 @@
           {% endblock %}
         </div>
       </main>
-      <footer>
+      <footer class="footer"> 
         {% include 'layouts/footer.njk' %}
       </footer>
     </div>
