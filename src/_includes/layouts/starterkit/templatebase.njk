@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="{{ language or metadata.language }}">
   {# <title>{{ tito.title }}</title> #}
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,14 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="generator" content="Eleventy"/>
+    <meta name="”twitter:site”" content="”@UTChattanooga”">
+    <meta property="og:title" content="University of Tennessee at Chattanooga"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="{{ description or metadata.description }}"/>
+    <meta property="og:url" content="{{ url or metadata.url }}"/>
+    <meta property="og:image" content="{{ imageurl or metadata.url }}"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
     <link rel="stylesheet" href="/{{ hash['css/styles.css'] }}"/>
     <script defer src="/{{ hash['js/scripts.js'] }}"></script>
     {# <script defer src="/{{ hash['js/raverss.js'] }}"></script> #}
@@ -18,33 +27,40 @@
   </head>
   <body
     class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript aria-hidden="true">
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M934TRF"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
     {# <div class="container" id="container"> #}
     <div>
-      <header class="header">
+      <header
+        class="header">
         {# <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
         {% include 'components/header.njk' %}
       </header>
       {# inner #}
-
       {% block content %}
-            {{ content | safe }}
+        {{ content | safe }}
       {% endblock %}
-
-
       {# <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-        <div class="main-content inner">
-          <div class="utc-rave-alert"></div>
-          <section class="section-card boxed love-utc">
-            <div class="card">
-              {% include 'layouts/tophero.njk' %}
-              {% include 'layouts/quickfacts.njk' %}
-            </div>
-            {% include 'layouts/homeboundcopy.njk' %}
-          </section>
-
-        </div>
-      </main> #}
-      <footer class="footer"> 
+              <div class="main-content inner">
+                <div class="utc-rave-alert"></div>
+                <section class="section-card boxed love-utc">
+                  <div class="card">
+                    {% include 'layouts/tophero.njk' %}
+                    {% include 'layouts/quickfacts.njk' %}
+                  </div>
+                  {% include 'layouts/homeboundcopy.njk' %}
+                </section>
+      
+              </div>
+            </main> #}
+      <footer class="footer">
         {% include 'components/footer.njk' %}
       </footer>
     </div>
@@ -54,14 +70,12 @@
       integrity="sha512-Yrd3VqXNBUzyCQWVBlL65mTdE1snypc9E3XnGJba0zJmxweyJAqDNp6XSARxxAO6hWdwMpKQOIGE5uvGdG0+Yw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
-
-          <!--Initialize Blazy-->
+    <!--Initialize Blazy-->
     <script>
-        ;
-        (function() {
-            // Initialize
-            var bLazy = new Blazy();
-        })();
+      ;
+      (function () { // Initialize
+        var bLazy = new Blazy();
+      })();
     </script>
   </body>
 </html>
