@@ -1,6 +1,8 @@
 ---
-title: Explore UTC
-description: Become a Moc!
+title: Outside Your Expectations
+description: The University of Tennessee at Chattanooga is not your average university.
+permalink: "explore/"
+data: metadata
 layout: layouts/starterkit/templatebase.njk
 
 ---
@@ -10,10 +12,10 @@ layout: layouts/starterkit/templatebase.njk
           <div class="utc-rave-alert"></div>
           <section class="section-card boxed love-utc">
             <div class="card">
-              {% include 'components/tophero.njk' %}
-              {% include 'components/quickfacts.njk' %}
+              {% include '../explore/components/tophero.njk' %}
+              {% include '../explore/components/quickfacts.njk' %}
             </div>
-            {% include 'components/homeboundcopy.njk' %}
+            {% include '../explore/components/homeboundcopy.njk' %}
           </section>
           {% block content %}
             {{ content | safe }}

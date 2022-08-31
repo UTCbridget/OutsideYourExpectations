@@ -1,11 +1,3 @@
----
-title: Outside Your Expectations
-description: The University of Tennessee at Chattanooga is not your average university.
-permalink: "outside/"
-data: metadata
-
----
-
 <!DOCTYPE html>
 <html lang="en">
   {# <title>{{ tito.title }}</title> #}
@@ -16,7 +8,6 @@ data: metadata
     {% if description %}
       <meta name="description" content="{{ description or metadata.description }}"/>
     {% endif %}
-        {# - Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="generator" content="Eleventy"/>
@@ -29,29 +20,32 @@ data: metadata
     class="antialiased">
     {# <div class="container" id="container"> #}
     <div>
-      <header
-        class="header" itemscope="" itemtype="https://schema.org/WPHeader">
+      <header class="header">
         {# <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
-        {% include 'layouts/header.njk' %}
+        {% include 'components/header.njk' %}
       </header>
       {# inner #}
-      <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+
+      {% block content %}
+            {{ content | safe }}
+      {% endblock %}
+
+
+      {# <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
         <div class="main-content inner">
           <div class="utc-rave-alert"></div>
           <section class="section-card boxed love-utc">
             <div class="card">
-              {% include 'layouts/outside/topherooutside.njk' %}
+              {% include 'layouts/tophero.njk' %}
               {% include 'layouts/quickfacts.njk' %}
             </div>
-            {% include 'layouts/outside/homeboundcopyoutside.njk' %}
+            {% include 'layouts/homeboundcopy.njk' %}
           </section>
-          {% block content %}
-            {{ content | safe }}
-          {% endblock %}
+
         </div>
-      </main>
+      </main> #}
       <footer class="footer"> 
-        {% include 'layouts/footer.njk' %}
+        {% include 'components/footer.njk' %}
       </footer>
     </div>
     <script src="https://kit.fontawesome.com/6cef20ef42.js" crossorigin="anonymous"></script>

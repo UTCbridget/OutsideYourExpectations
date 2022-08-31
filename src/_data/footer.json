@@ -1,0 +1,143 @@
+[{
+    "id": [{
+        "value": 19376
+    }],
+    "uuid": [{
+        "value": "48070d99-6120-46c4-87f8-240be2ebde45"
+    }],
+    "revision_id": [{
+        "value": 3412311
+    }],
+    "langcode": [{
+        "value": "en"
+    }],
+    "type": [{
+        "target_id": "utc_department_info_block",
+        "target_type": "block_content_type",
+        "target_uuid": "5f7f6ac5-0967-4f59-a5b5-830c5b120467"
+    }],
+    "revision_created": [{
+        "value": "2022-08-08T18:37:20+00:00",
+        "format": "Y-m-d\\TH:i:sP"
+    }],
+    "revision_user": [{
+        "target_id": 66,
+        "target_type": "user",
+        "target_uuid": "c4e377ce-4248-441c-8caa-6ead2147cb05",
+        "url": "/user/66"
+    }],
+    "revision_log": [],
+    "status": [{
+        "value": true
+    }],
+    "info": [{
+        "value": "Communications and Marketing"
+    }],
+    "changed": [{
+        "value": "2022-08-08T18:37:20+00:00",
+        "format": "Y-m-d\\TH:i:sP"
+    }],
+    "reusable": [{
+        "value": true
+    }],
+    "default_langcode": [{
+        "value": true
+    }],
+    "revision_translation_affected": [{
+        "value": true
+    }],
+    "metatag": {
+        "value": {
+            "canonical_url": "https://www.utc.edu/json/departmentdirectory/1711",
+            "title": "Department Directory | University of Tennessee at Chattanooga"
+        }
+    },
+    "field_utc_department_building": [{
+        "uri": "https://explore.utc.edu/?id=1826#!m/492543?ce/46605?ct/46600?mc/35.04605436540548,-85.30027627944948?z/20?lvl/0",
+        "title": "203 Founders Hall",
+        "options": []
+    }],
+    "field_utc_department_socialmedia": [{
+        "platform": null,
+        "value": null,
+        "platform_values": {
+            "departamental_homepage": {
+                "value": "communications-and-marketing"
+            },
+            "blog": {
+                "value": ""
+            },
+            "linkedin": {
+                "value": ""
+            },
+            "youtube": {
+                "value": "utchattanooga"
+            },
+            "vimeo": {
+                "value": ""
+            },
+            "podcast": {
+                "value": ""
+            },
+            "twitter": {
+                "value": "UTChattanooga"
+            },
+            "instagram": {
+                "value": "utchattanooga"
+            },
+            "facebook": {
+                "value": "UTChattanooga"
+            }
+        }
+    }],
+    "field_utc_department_street_addr": [{
+        "uri": "route:<nolink>",
+        "title": "615 McCallie Ave, Chattanooga, TN 37403",
+        "options": []
+    }],
+    "field_utc_organizational_section": [{
+        "target_id": 1711,
+        "target_type": "taxonomy_term",
+        "target_uuid": "4d675bf9-fbc0-4dce-b178-80c39d064b31",
+        "url": "/taxonomy/term/1711"
+    }],
+    "field_utc_department_email": [],
+    "field_utc_department_fax_number": [],
+    "field_utc_department_hours": [{
+            "day": 1,
+            "starthours": 800,
+            "endhours": 1700,
+            "comment": ""
+        },
+        {
+            "day": 2,
+            "starthours": 800,
+            "endhours": 1700,
+            "comment": ""
+        },
+        {
+            "day": 3,
+            "starthours": 800,
+            "endhours": 1700,
+            "comment": ""
+        },
+        {
+            "day": 4,
+            "starthours": 800,
+            "endhours": 1700,
+            "comment": ""
+        },
+        {
+            "day": 5,
+            "starthours": 800,
+            "endhours": 1700,
+            "comment": ""
+        }
+    ],
+    "field_utc_department_mail_code": [{
+        "value": "5655"
+    }],
+    "field_utc_department_phone": [{
+        "value": "423-425-4363"
+    }]
+}]
