@@ -53,13 +53,13 @@ npm install
 ### 5. Run Eleventy
 
 ```
-npx @11ty/eleventy
+npm run start
 ```
 
 Or build and host locally for local development
 
 ```
-npx @11ty/eleventy --serve
+npm run build
 ```
 
 Or build automatically when a template changes:
