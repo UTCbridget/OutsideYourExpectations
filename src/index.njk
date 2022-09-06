@@ -8,18 +8,18 @@ url: https://discover.utc.edu/outside
 imageurl: https://discover.utc.edu/img/campaigns/outside/OutsideYourExpectationsv2.webp
 ---
 
-      <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-        <div class="main-content inner">
-          <div class="utc-rave-alert"></div>
-          <section class="section-card boxed love-utc">
-            <div class="card">
-              {% include 'components/tophero.njk' %}
-              {% include 'components/quickfacts.njk' %}
-            </div>
-            {% include 'components/homeboundcopy.njk' %}
-          </section>
-          {% block content %}
-            {{ content | safe }}
-          {% endblock %}
-        </div>
-      </main>
+<main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <div class="main-content inner">
+    <div class="utc-rave-alert"></div>
+    <section class="section-card boxed love-utc">
+      <div class="card">
+        {% include 'components/tophero.njk' %}
+        {% include 'components/quickfacts.njk' %}
+      </div>
+      {% include 'components/homeboundcopy.njk' %}
+    </section>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </div>
+</main>
