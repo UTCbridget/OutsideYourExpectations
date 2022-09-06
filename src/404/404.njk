@@ -1,0 +1,32 @@
+---
+layout: layouts/starterkit/templatebase.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+{# # Content not found. #}
+{# I'm sorry.
+It's not you. It's me.
+ 
+
+There's a page out there that's better for you than me. #}
+<main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <div class="main-content inner">
+        <div class="utc-rave-alert"></div>
+        <section class="section-card boxed love-utc">
+            {% include '../404/components/homeboundcopy.njk' %}
+        </section>
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+    </div>
+</main>
+<a href="{{ '/' | url }}">home</a>.
+{#
+Read more: https://www.11ty.dev/docs/quicktips/not-found/
+
+This will work for both GitHub pages and Netlify:
+
+* https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/
+* https://www.netlify.com/docs/redirects/#custom-404
+#}
