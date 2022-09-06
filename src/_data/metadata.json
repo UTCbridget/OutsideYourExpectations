@@ -1,6 +1,7 @@
 {
     "title": "Demo",
     "url": "https://example.com/",
+    "utcurl": "https://discover.utc.edu/",
     "language": "en",
     "description": "I am writing about my experiences as a naval navel-gazer.",
     "feed": {
