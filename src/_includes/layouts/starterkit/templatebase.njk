@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html
-  lang="{{ language or metadata.language }}">
+<html lang="{{ language or metadata.language }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
@@ -47,18 +46,18 @@
         {{ content | safe }}
       {% endblock %}
       {# <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-              <div class="main-content inner">
-                <div class="utc-rave-alert"></div>
-                <section class="section-card boxed love-utc">
-                  <div class="card">
-                    {% include 'layouts/tophero.njk' %}
-                    {% include 'layouts/quickfacts.njk' %}
-                  </div>
-                  {% include 'layouts/homeboundcopy.njk' %}
-                </section>
-      
-              </div>
-            </main> #}
+                    <div class="main-content inner">
+                      <div class="utc-rave-alert"></div>
+                      <section class="section-card boxed love-utc">
+                        <div class="card">
+                          {% include 'layouts/tophero.njk' %}
+                          {% include 'layouts/quickfacts.njk' %}
+                        </div>
+                        {% include 'layouts/homeboundcopy.njk' %}
+                      </section>
+            
+                    </div>
+                  </main> #}
       <footer class="footer">
         {% include 'components/footer.njk' %}
       </footer>

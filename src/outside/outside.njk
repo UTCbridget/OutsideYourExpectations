@@ -4,22 +4,24 @@ description: The University of Tennessee at Chattanooga is not your average univ
 permalink: "outside/"
 data: metadata
 language: en
+tags: campaign
 url: https://discover.utc.edu/outside
 imageurl: https://discover.utc.edu/img/campaigns/outside/OutsideYourExpectationsv2.webp
 layout: layouts/starterkit/templatebase.njk
 ---      
-      <main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-        <div class="main-content inner">
-          <div class="utc-rave-alert"></div>
-          <section class="section-card boxed love-utc">
-            <div class="card">
-              {% include '../outside/components/topherooutside.njk' %}
-              {% include 'components/quickfacts.njk' %}
-            </div>
-            {% include '../outside/components/homeboundcopyoutside.njk' %}
-          </section>
-          {% block content %}
-            {{ content | safe }}
-          {% endblock %}
-        </div>
-      </main>
+
+<main class="container mx-auto my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <div class="main-content inner">
+    <div class="utc-rave-alert"></div>
+    <section class="section-card boxed love-utc">
+      <div class="card">
+        {% include '../outside/components/topherooutside.njk' %}
+        {% include 'components/quickfacts.njk' %}
+      </div>
+      {% include '../outside/components/homeboundcopyoutside.njk' %}
+    </section>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </div>
+</main>

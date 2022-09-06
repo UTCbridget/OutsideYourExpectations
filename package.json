@@ -1,7 +1,7 @@
 {
-    "name": "yatas",
-    "version": "1.0.0",
-    "description": "Yet Another Tailwind Apline Starter",
+    "name": "OutsideYourExpectations",
+    "version": "4.0.0",
+    "description": "Yet Another Tailwind Alpine UTC Starter",
     "scripts": {
         "clean": "del _site",
         "build": "NODE_ENV=production concurrently \"npm:build-*\" && node hash && ELEVENTY_ENV=production eleventy",
@@ -21,8 +21,8 @@
         "TailwindCSS",
         "Alpine.js"
     ],
-    "author": "Yann Haefliger<hello@needbrainz.com>",
-    "license": "ISC",
+    "author": "Bernardo Martinez <bernardo-martinez@utc.edu>",
+    "license": "MIT",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.1",
         "@11ty/eleventy-navigation": "^0.3.2",
