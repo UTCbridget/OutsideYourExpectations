@@ -4,7 +4,7 @@
 
 *******
 
-###Purpose
+### Purpose
 
 This projects builds on top of the efforts made on <https://webapp.utc.edu/digital/experience_utc/>. It incorporates other projects which include the brandbar v.2 code found at this repo: <https://github.com/UTCWeb/utc-brandbar-html-only> and utc SSG emergency website.
 Features unique to this version include.
@@ -18,6 +18,13 @@ Features unique to this version include.
 
 This project can be used as a base template for other marketing pages as well as a launching point for implementation of Drupal and Wordpress components.
 Its setup through our Cloudflare pages system so it should automatically deploy to production upon deploying to the main branch.
+
+### How to preview changes?
+
+Any branch that's merge to upstream develop (UTCWeb/OutsideYourExpectations) gets it own preview link at.
+https://develop.outsideyourexpectations.pages.dev
+Branches merged to upstream master will directly update.
+https://discover.utc.edu/outside/
 
 *******
 
