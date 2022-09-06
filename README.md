@@ -1,64 +1,100 @@
-# explore-utc
-"Explore UTC" is a one-off, html-based marketing page with lots of movement and effects.
+# Outside your Expectations
+
+"Outside your Expectations" is a marketing SSG (static site generator system) for UTC. An html-based marketing page with lots of movement and effects.
 
 *******
 
-Purpose
+###Purpose
 
-This is a recruitment tool used to increase student enrollment. It is an engaging and visuallly aesthetic page that integrates numerous UX features in order to appeal and capture the user's attention and promote the likelihood of conversion. It replaces the current Experience UTC page found here: https://webapp.utc.edu/digital/experience_utc/. It will be linked from the home page of www.utc.edu, but primarily it will be used for recruitment campaigns via QR codes. Upon the completion of moving some of its features to Drupal, this will become an internal Drupal page. It incorporates the brandbar v.2 code found at this repo: https://github.com/UTCWeb/utc-brandbar-html-only
+This projects builds on top of the efforts made on <https://webapp.utc.edu/digital/experience_utc/>. It incorporates other projects which include the brandbar v.2 code found at this repo: <https://github.com/UTCWeb/utc-brandbar-html-only> and utc SSG emergency website.
+Features unique to this version include.
 
-*******
+- tailwindcss
+- AlpineJs
+- 11ty
+- Npm package management and a few other features.
 
-Build Status
+### How to Use?
 
-Completed and responsive.
-
-*******
-
-Languages
-
-This is a simple project that uses html, javascript, jquery, and css. No CMS required.
-
-*******
-
-Features
-
-This project features the following: 
-
--Animation on scroll
-
--Headline effects
-
--Masonry
-
--Polaroids
-
--Envelope opening
-
--Confetti
-
--Special CSS properties for backgrounds and animations
+This project can be used as a base template for other marketing pages as well as a launching point for implementation of Drupal and Wordpress components.
+Its setup through our Cloudflare pages system so it should automatically deploy to production upon deploying to the main branch.
 
 *******
 
-How to Use?
+## Getting Started
 
-This project can be used as a base template for other marketing pages as well as a launching point for implementation of Drupal components.
+### 1. Fork this repo
 
-*******
+### 2. Clone your forked repo
+
+### 3. Navigate to the directory
+
+```
+cd OutsideYourExpectations
+```
+
+Specifically have a look at `.eleventy.js` to see if you want to configure any Eleventy options differently.
+
+### 3. Install dependencies
+
+```
+npm install
+```
+
+### 4. Edit src/\_data/metadata.json
+
+### 5. Run Eleventy
+
+```
+npx @11ty/eleventy
+```
+
+Or build and host locally for local development
+
+```
+npx @11ty/eleventy --serve
+```
+
+Or build automatically when a template changes:
+
+```
+npx @11ty/eleventy --watch
+```
+
+Or in debug mode:
+
+```
+DEBUG=* npx @11ty/eleventy
+```
+
+### Implementation Notes
+
+- `about/index.md` shows how to add a content page.
+- `src/{campaign name}/` has the digital marketing campaign group toghether. For example, anything inside the outside folder belongs to the outside your expectations campaign. It's recommended to follow that pattern for specific files that might only be used once.
+- `src/_includes/` has a system of layouts and componets. For the purpose of this project `src/_includes/layouts` should be reserved for root level items. Global components that are reusable should be place on the `src/_includes/components` those components are shared by multiple projects. Overwrite made for an specfic campaing should be under `src/{campaign name}/components` as an example an override for the outside campaing will be placed under `src/outside/components`.
+- `posts/` has the blog posts. They need only the `post` tag to be added to this collection.
+- The `img` directory in the input directory will be copied to the output folder (via `addPassthroughCopy()` in the `.eleventy.js` file).
+- The `css` and new `js` files should be added under `assets/css` or `assets/js` after which one has to import those files into `script.js` or `script.css` doing so adds it to the bundle built files and adds the cache busting feature on them.
+- The blog post feed template is in `feed/feed.njk`. This is also a good example of using a global data files in that it uses `_data/metadata.json`.
+- This example uses three layouts:
+  - `/src/_includes/starterkit/templatebase.njk`: the top level HTML structure
+  - `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
+- `_includes/posts.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `index.njk` has an example of how to use it.
 
 Credits
 
 All credits for special features are named in the individual files. They are as follows:
 
--https://codyhouse.co/gem/css-animated-headlines
+-<https://github.com/UTCWeb/explore-utc>
 
--https://michalsnik.github.io/aos/
+-<https://codyhouse.co/gem/css-animated-headlines>
 
--https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/
+-<https://michalsnik.github.io/aos/>
 
--https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout
+-<https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/>
 
--https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card
+-<https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout>
 
--https://codepen.io/jakegilesphillips/pen/MveNLe
+-<https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card>
+
+-<https://codepen.io/jakegilesphillips/pen/MveNLe>
