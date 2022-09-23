@@ -447,7 +447,7 @@ footer section {
     font-size: 1.25rem;
     padding-top: .45rem;
     padding-bottom: .45rem;
-    background-color: #fdb736;
+    background-color: var(--gold);
 }
 
 .visit-chatt-btn-wrapper {
