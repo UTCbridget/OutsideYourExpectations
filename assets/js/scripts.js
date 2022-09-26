@@ -33,7 +33,7 @@ window.onload = function() {
             navbar.classList.toggle("open");
         }
         // sidebar submenu open close js code
-    let iamMenu = document.querySelector(".iam-menu-item");
+    /*let iamMenu = document.querySelector(".iam-menu-item");
     iamMenu.onclick = function() {
         navLinks.classList.remove("show2");
         navLinks.classList.toggle("show1");
@@ -42,7 +42,7 @@ window.onload = function() {
     qlMenu.onclick = function() {
         navLinks.classList.remove("show1");
         navLinks.classList.toggle("show2");
-    }
+    }*/
 };
 
 // <!--Throw confetti-->

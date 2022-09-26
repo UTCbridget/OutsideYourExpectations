@@ -88,7 +88,8 @@ i {
     background: #e7eaee;
     display: flex;
     align-content: center;
-    padding: 0 12px
+    padding: 0 12px;
+    z-index: 1000;
 }
 
 .title-area {
@@ -443,7 +444,7 @@ li.ribbon-container {
         overflow-x: hidden
     }
     .header-first-row {
-        z-index: 10;
+        z-index: 100;
         box-shadow: 0 0 4px 4px rgb(0 0 0 / 30%)
     }
     .nav-secondary ul {
