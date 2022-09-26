@@ -835,6 +835,10 @@ img.power-c-pen {
         padding: 60px 24px;
         width: 95%
     }
+    .card h2, .section-copy h3.white-text.aos-init.aos-animate {
+        font-size: 2.75rem;
+        line-height: 105%;
+    }
     .card p {
         text-align: center
     }
