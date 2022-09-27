@@ -448,7 +448,7 @@ li.ribbon-container {
         box-shadow: 0 0 4px 4px rgb(0 0 0 / 30%)
     }
     .nav-secondary ul {
-        min-width: 200px
+        min-width: 42px
     }
     .hamburger {
         display: flex
@@ -608,4 +608,8 @@ li.ribbon-container {
     }
 }
 
-
+@media (max-width:320px) {
+    .title-area {
+        max-width: 42px;
+    }
+}
