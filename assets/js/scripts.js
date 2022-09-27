@@ -12,7 +12,7 @@ Alpine.start()
 AOS.init({ easing: 'ease-out-back', duration: 1000 });
 
 // <!--Apply Now ribbon-->
-const ribbon = document.getElementById("menuribbon");
+/*const ribbon = document.getElementById("menuribbon");
 ribbon.onmouseover = function() {
     this.classList.remove("up");
     this.classList.add("down");
@@ -20,7 +20,7 @@ ribbon.onmouseover = function() {
 ribbon.onmouseout = function() {
     this.classList.remove("down");
     this.classList.add("up");
-};
+};*/
 
 // <!--Mobilize the menu-->
 window.onload = function() {
@@ -29,10 +29,10 @@ window.onload = function() {
     let menuOpenBtn = document.querySelector('.hamburger');
     let openMenu = document.querySelector(".nav-primary ul.menu");
     menuOpenBtn.onclick = function() {
-            this.classList.toggle("active");
-            navbar.classList.toggle("open");
-        }
-        // sidebar submenu open close js code
+        this.classList.toggle("active");
+        navbar.classList.toggle("open");
+    }
+    // sidebar submenu open close js code
     /*let iamMenu = document.querySelector(".iam-menu-item");
     iamMenu.onclick = function() {
         navLinks.classList.remove("show2");
@@ -46,7 +46,7 @@ window.onload = function() {
 };
 
 // <!--Throw confetti-->
-function throwConfetti() { // start
+/*function throwConfetti() { // start
     const start = () => {
         setTimeout(function() {
             confetti.start()
@@ -60,7 +60,7 @@ function throwConfetti() { // start
     };
     start();
     stop();
-}
+}*/
 
 
 // <!--Let's make scrolling easier on mobile devices by removing the 2nd row of Chattanooga images-->
