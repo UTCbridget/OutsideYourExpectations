@@ -88,7 +88,8 @@ i {
     background: #e7eaee;
     display: flex;
     align-content: center;
-    padding: 0 12px
+    padding: 0 12px;
+    z-index: 1000;
 }
 
 .title-area {
@@ -121,7 +122,7 @@ i {
 .nav-secondary ul {
     min-height: 65px;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     min-width: 150px
 }
 
@@ -285,7 +286,7 @@ li.ribbon-container {
 .nav-primary .menu {
     display: flex;
     justify-content: flex-end;
-    width: 93%
+    width: 98%
 }
 
 .nav-primary .menu li {
@@ -432,22 +433,24 @@ li.ribbon-container {
     display: none
 }
 
-@media(max-width:1024px) {
+/*@media(max-width:1024px) {
     .nav-primary .menu {
         width: 90%
     }
-}
+}*/
 
 @media(max-width:991px) {
     #container {
         overflow-x: hidden
     }
+    .title-area {max-width: 100%;}
     .header-first-row {
-        z-index: 10;
-        box-shadow: 0 0 4px 4px rgb(0 0 0 / 30%)
+        z-index: 100;
+        box-shadow: 0 0 4px 4px rgb(0 0 0 / 30%);
+        padding: 0 24px 0 12px
     }
     .nav-secondary ul {
-        min-width: 200px
+        min-width: 42px
     }
     .hamburger {
         display: flex
@@ -539,7 +542,7 @@ li.ribbon-container {
         right: 12px;
         transform: rotate(-90deg)
     }
-    .nav-primary .menu li.iam-submenu,
+    /*.nav-primary .menu li.iam-submenu,
     .nav-primary .menu li.ql-submenu {
         padding-top: 0
     }
@@ -585,16 +588,15 @@ li.ribbon-container {
     .nav-primary .nav-links.show2 .menu .ql-arrow {
         transform: rotate(0deg);
         transform-origin: top center
-    }
+    }*/
 }
 
 @media(max-width:460px) {
     .title-area {
-        max-width: 48px;
         overflow: hidden
     }
     .title-area svg {
-        max-width: 320px
+        max-width: 280px
     }
     .nav-primary {
         width: 100%
@@ -604,5 +606,11 @@ li.ribbon-container {
 @media (max-width:370px) {
     .nav-primary .nav-links {
         max-width: 100%
+    }
+}
+
+@media (max-width:320px) {
+    .title-area {
+        max-width: 42px;
     }
 }
