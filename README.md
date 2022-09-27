@@ -26,6 +26,8 @@ https://develop.outsideyourexpectations.pages.dev
 Branches merged to upstream master will directly update.
 https://discover.utc.edu/outside/
 
+Note: Sometimes the CDNs are slow to purge cache, making it difficult to see your changes in development. In that case the work-around is to click on the name of the of the page in CloudFlare, then click on the up-right-arrow icon under "Development" by the hash you want to view, usually the latest deployment (which is at the top).
+
 *******
 
 ## Getting Started
