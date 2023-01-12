@@ -409,7 +409,6 @@ footer section {
 }
 @media (min-width:992px) and (max-width:1280px) {
     .card .left-right-container { 
-        width: 85%;
         margin-left: auto;
         margin-right: auto;
     }
