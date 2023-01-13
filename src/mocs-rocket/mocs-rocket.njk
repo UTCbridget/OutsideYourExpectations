@@ -13,6 +13,9 @@ layout: layouts/starterkit/templatebase.njk
   <div class="main-content inner">
     <div class="utc-rave-alert"></div>
     <section class="section-card boxed love-utc">
+    <style>
+        @media (max-width:768px) { .card {margin-top:0;padding-top:24px;} }
+    </style>
       <div class="card" style="margin-top:36px;padding-top:48px;">
         {% include '../mocs-rocket/components/topherorowing.njk' %}
         {% include '../mocs-rocket/components/quickfacts.njk' %}
