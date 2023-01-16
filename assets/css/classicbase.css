@@ -943,4 +943,7 @@ img.power-c-pen {
     #right-footer-menu {
         padding-left:12px!important;
     }
+    .footer-copyright a {
+        font-size: .85rem;
+    }
 }
