@@ -932,3 +932,15 @@ img.power-c-pen {
         height: 320px
     }
 }
+
+@media (max-width:320px) {
+    #custom_html-5 {
+        padding: 0;
+    }
+    #left-footer-menu {
+        padding-right:12px;
+    }
+    #right-footer-menu {
+        padding-left:12px;
+    }
+}
