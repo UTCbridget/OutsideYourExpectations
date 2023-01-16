@@ -935,12 +935,12 @@ img.power-c-pen {
 
 @media (max-width:320px) {
     #custom_html-5 {
-        padding: 0;
+        padding: 0!important;
     }
     #left-footer-menu {
-        padding-right:12px;
+        padding-right:12px!important;
     }
     #right-footer-menu {
-        padding-left:12px;
+        padding-left:12px!important;
     }
 }
