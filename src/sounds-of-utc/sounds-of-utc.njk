@@ -1,0 +1,32 @@
+---
+title: Sounds of UTC
+description: The University of Tennessee at Chattanooga is not your average university.
+permalink: "sounds-of-utc/"
+data: metadata
+language: en
+tags: campaign
+url: https://discover.utc.edu/sounds-of-utc
+imageurl: https://discover.utc.edu/img/campaigns/sounds-of-utc/bird-banding.webp
+layout: layouts/starterkit/templatebase.njk
+---      
+
+<main class="container mx-auto md:my-14" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <div class="main-content inner">
+    <div class="utc-rave-alert"></div>
+    <section class="section-card boxed love-utc">
+    <section class="section-card boxed love-utc">
+     <style>
+        .card {margin-top:36px;padding-top:48px;}
+        @media (max-width:768px) { .card {margin-top:0;padding-top:24px;} }
+    </style>
+      <div class="card">
+        {% include '../sounds-of-utc/components/topherorowing.njk' %}
+        {% include '../sounds-of-utc/components/quickfacts.njk' %}
+      </div>
+      {% include '../sounds-of-utc/components/homeboundcopyrowing.njk' %}
+    </section>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </div>
+</main>
