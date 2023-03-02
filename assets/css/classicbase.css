@@ -425,8 +425,6 @@ footer section {
 .card div.right {
     height: 100%;
     position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .card div.left {
@@ -848,10 +846,6 @@ img.power-c-pen {
     .card {
         padding: 60px 24px;
         width: 95%
-    }
-    .card div.right {
-        margin-top:0;
-        margin-bottom:2rem;
     }
     .card h2, .section-copy h3.white-text {
         font-size: 2.75rem;
