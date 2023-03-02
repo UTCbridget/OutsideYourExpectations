@@ -405,7 +405,7 @@ footer section {
 .card .left-right-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 48px
+    margin-bottom: 36px;
 }
 .campaign-image {
     width:100%;height:auto;
