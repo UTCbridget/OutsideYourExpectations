@@ -407,6 +407,9 @@ footer section {
     justify-content: space-between;
     margin-bottom: 48px
 }
+.campaign-image {
+    width:100%;height:auto;max-height:453px;
+}
 @media (min-width:992px) and (max-width:1280px) {
     .card .left-right-container { 
         margin-left: auto;
@@ -850,6 +853,9 @@ img.power-c-pen {
     }
     .card p {
         text-align: center
+    }
+    .campaign-image {
+        max-height:281px;
     }
     .quick-facts {
         width: 100%;
