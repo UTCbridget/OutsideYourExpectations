@@ -851,7 +851,7 @@ img.power-c-pen {
     }
     .card div.right {
         margin-top:0;
-        margin-bottom:0;
+        margin-bottom:2rem;
     }
     .card h2, .section-copy h3.white-text {
         font-size: 2.75rem;
